@@ -1,0 +1,8 @@
+
+<h1>{{solver.Username}}</h1>
+{% if error_message %} <p> <strong> {{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'polls:vote' solver.id %}" method="post">
+{% csrf_token %}
+<input type="text" name="skill"><br>
+<input type="submit" value="vote">
+</form>

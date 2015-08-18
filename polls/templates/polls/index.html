@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ursolver</title>
+</head>
+<body>
+{% if latest_solvers_list %}
+    <ul>
+    {% for solver in latest_solvers_list %}
+        <li><a href="{% url 'polls:results' solver.id %}">{{ solver.Username }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

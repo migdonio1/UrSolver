@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ursolver - Solvers </title>
+</head>
+<body>
+	<h1>{{ solver.Username }}</h1>
+	<ul>
+		<li>{{ solver.Email}}</li>
+		<li>{{ solver.Name}}</li>
+		<li>{{ solver.Age}}</li>
+		<li>{{ solver.password}}</li>
+		<li>{{ solver.fechaRegistro}}</li>
+		<li>Skills:</li>
+		<ul>	
+			{% for skill in solver.skill_set.all %}
+		    <li>{{ skill.skill }}</li>
+		{% endfor %}	
+		</ul>
+	</ul>
+
+
+
+</body>
+</html>
